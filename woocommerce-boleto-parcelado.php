@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WooCommerce Boleto
+ * Plugin Name: WooCommerce Boleto Parcelado
  * Plugin URI: https://github.com/matheusgimenez/woocommerce-boleto-parcelado
  * Description:
  * Author: matheusgimenez
@@ -223,13 +223,13 @@ class WC_Boleto_Parcelado {
 /**
  * Plugin activation and deactivation methods.
  */
-register_activation_hook( __FILE__, array( 'WC_Boleto', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'WC_Boleto', 'deactivate' ) );
+register_activation_hook( __FILE__, array( 'WC_Boleto_Parcelado', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'WC_Boleto_Parcelado', 'deactivate' ) );
 
 /**
  * Initialize the plugin.
  */
-add_action( 'plugins_loaded', array( 'WC_Boleto', 'get_instance' ), 0 );
+add_action( 'plugins_loaded', array( 'WC_Boleto_Parcelado', 'get_instance' ), 0 );
 
 endif;
 
