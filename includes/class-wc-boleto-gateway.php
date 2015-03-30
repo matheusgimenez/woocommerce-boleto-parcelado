@@ -25,6 +25,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		$this->title       = $this->get_option( 'title' );
 		$this->description = $this->get_option( 'description' );
 		$this->boleto_time = $this->get_option( 'boleto_time' );
+		$this->boleto_first_time = $this->get_option( 'boleto_time' );
 		$this->min_value   = intval($this->get_option( 'boleto_minimum' ));
 		$this->max_plots   = intval($this->get_option( 'boleto_max_plots' ));
 
@@ -83,7 +84,6 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 	 */
 	public function is_available() {
 		// Test if is valid for use.
-		var_dump($this->min_value);
 		if('yes' == $this->get_option( 'enabled' ) && $this->using_supported_currency() && $this->get_order_total() >= $this->min_value){
 			return 'yes';
 		}
@@ -147,6 +147,13 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 				'description' => __( 'Number of days to pay.', 'woocommerce-boleto-parcelado' ),
 				'desc_tip'    => true,
 				'default'     => 5
+			),
+			'boleto_first_time' => array(
+				'title'       => __( 'Deadline to pay the First Ticket', 'woocommerce-boleto-parcelado' ),
+				'type'        => 'text',
+				'description' => __( 'Number of days to pay.', 'woocommerce-boleto-parcelado' ),
+				'desc_tip'    => true,
+				'default'     => 30
 			),
 			'boleto_minimum' => array(
 				'title'       => __( 'Minimum value for ticket appear', 'woocommerce-boleto-parcelado' ),
@@ -710,7 +717,17 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		return $fields;
 	}
 	/**
-	 * Number field
+	 * Validate field
+	 *
+	 */
+	public function validate_fields(){
+		if(intval($_POST['woocommerce-boleto-parcelado-value']) > $this->max_plots || intval($this->get_order_total()) < $this->min_value){
+			return false;
+		}
+		return true;
+	}
+	/**
+	 * Fields
 	 *
 	 */
 	public function payment_fields(){
@@ -745,6 +762,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		// Generates ticket data.
 		$this->generate_boleto_data( $order );
 
+
 		// Reduce stock levels.
 		$order->reduce_order_stock();
 
@@ -771,7 +789,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 	 */
 	public function thankyou_page() {
 		$html = '<div class="woocommerce-message">';
-		$html .= sprintf( '<a class="button" href="%s" target="_blank">%s</a>', WC_Boleto::get_boleto_url( $_GET['key'] ), __( 'Pay the Ticket &rarr;', 'woocommerce-boleto-parcelado' ) );
+		$html .= sprintf( '<a class="button" href="%s" target="_blank">%s</a>', WC_Boleto_Parcelado::get_boleto_url( $_GET['key'] ), __( 'Pay the Ticket &rarr;', 'woocommerce-boleto-parcelado' ) );
 
 		$message = sprintf( __( '%sAttention!%s You will not get the ticket by Correios.', 'woocommerce-boleto-parcelado' ), '<strong>', '</strong>' ) . '<br />';
 		$message .= __( 'Please click the following button and pay the Ticket in your Internet Banking.', 'woocommerce-boleto-parcelado' ) . '<br />';
@@ -789,19 +807,26 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 	/**
 	 * Generate ticket data.
 	 *
-	 * @param  object $order Order object.
+	 * @param  object $order order object.
 	 *
 	 * @return void
 	 */
 	public function generate_boleto_data( $order ) {
-		// Ticket data.
-		$data                       = array();
-		$data['nosso_numero']       = apply_filters( 'wcboleto_our_number', $order->id );
-		$data['numero_documento']   = apply_filters( 'wcboleto_document_number', $order->id );
-		$data['data_vencimento']    = date( 'd/m/Y', time() + ( absint( $this->boleto_time ) * 86400 ) );
-		$data['data_documento']     = date( 'd/m/Y' );
-		$data['data_processamento'] = date( 'd/m/Y' );
-
+		$plots = intval($_POST['woocommerce-boleto-parcelado-value']);
+		$data = array();
+		for ($i=1; $i <= $plots; $i++) {
+			$data[$i] = array();
+			$data[$i]['nosso_numero'] = apply_filters( 'wcboleto_our_number', $order->id );
+			$data[$i]['numero_documento'] = apply_filters( 'wcboleto_document_number', $order->id );
+			if($i == 1){
+				$data[$i]['data_vencimento'] = date( 'd/m/Y', time() + ( absint( $this->boleto_first_time ) * 86400 ) );
+			}
+			else{
+				$data[$i]['data_vencimento'] = date( 'd/m/Y', time() + ( absint( $this->boleto_time ) * 86400 ) );
+			}
+			$data[$i]['data_documento'] = date( 'd/m/Y' );
+		    $data[$i]['data_processamento'] = date( 'd/m/Y' );
+		}
 		update_post_meta( $order->id, 'wc_boleto_data', $data );
 	}
 
@@ -828,7 +853,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 
 		$html .= apply_filters( 'wcboleto_email_instructions', $message );
 
-		$html .= '<br />' . sprintf( '<a class="button" href="%s" target="_blank">%s</a>', WC_Boleto::get_boleto_url( $order->order_key ), __( 'Pay the Ticket &rarr;', 'woocommerce-boleto-parcelado' ) ) . '<br />';
+		$html .= '<br />' . sprintf( '<a class="button" href="%s" target="_blank">%s</a>', WC_Boleto_Parcelado::get_boleto_url( $order->order_key ), __( 'Pay the Ticket &rarr;', 'woocommerce-boleto-parcelado' ) ) . '<br />';
 
 		//$html .= '<strong style="font-size: 0.8em">' . sprintf( __( 'Validity of the Ticket: %s.', 'woocommerce-boleto-parcelado' ), date( 'd/m/Y', time() + ( absint( $this->boleto_time ) * 86400 ) ) ) . '</strong>';
 

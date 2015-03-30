@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class WC_Boleto_Admin {
+class WC_Boleto_Parcelado_Admin {
 
 	/**
 	 * Initialize the admin.
@@ -195,4 +195,4 @@ class WC_Boleto_Admin {
 	}
 }
 
-new WC_Boleto_Admin();
+new WC_Boleto_Parcelado_Admin();
