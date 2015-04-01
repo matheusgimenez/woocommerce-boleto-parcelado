@@ -35,6 +35,97 @@
 // +----------------------------------------------------------------------+
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly.
+
+$codigobanco = "756";
+$codigo_banco_com_dv = geraCodigoBanco($codigobanco);
+$nummoeda = "9";
+$fator_vencimento = fator_vencimento($dadosboleto["data_vencimento"]);
+$taxa_boleto = $dadosboleto["taxa_boleto"];
+
+// Valor Passando por uma adaptação
+$valor = str_replace(",", ".",$dadosboleto["valor_boleto"]);
+$valorFormatado = number_format( $valor + $taxa_boleto, 2, ',', '' );
+
+// Valor tem 10 digitos, sem virgula
+$valor = formata_numero($dadosboleto["valor_boleto"],10,0,"valor");
+
+// Agencia é sempre 4 digitos
+$agencia = formata_numero($dadosboleto["agencia"],4,0);
+
+// Conta é sempre 8 digitos
+$conta = formata_numero($dadosboleto["conta"],8,0);
+
+$carteira = $dadosboleto["carteira"];
+
+// Zeros: usado quando convenio de 7 digitos
+$livre_zeros='000000';
+$modalidadecobranca = $dadosboleto["modalidade_cobranca"];
+$numeroparcela      = $dadosboleto["numero_parcela"];
+$convenio = formata_numero($dadosboleto["convenio"],7,0);
+
+// Gera o ID do Produto
+$geraProductID = $dadosboleto["nosso_numero"];
+
+// Gerando o Nosso Número Corretamente
+$nossoNumero = formata_numdoc($geraProductID,7);
+$qtde_nosso_numero = strlen($nossoNumero);
+$sequencia = formata_numdoc($agencia,4).formata_numdoc(str_replace("-","",$convenio),10).formata_numdoc($nossoNumero,7);
+$cont=0;
+$calculoDv = '';
+
+for($num=0;$num<=strlen($sequencia);$num++) {
+    $cont++;
+    if($cont == 1) {
+        // Constante fixa Sicoob » 3197
+        $constante = 3;
+    }
+
+    if($cont == 2) {
+        $constante = 1;
+    }
+
+    if($cont == 3) {
+        $constante = 9;
+    }
+
+    if($cont == 4) {
+        $constante = 7;
+        $cont = 0;
+    }
+
+    $calculoDv = $calculoDv + (substr($sequencia,$num,1) * $constante);
+}
+
+$Resto = $calculoDv % 11;
+$Dv = 11 - $Resto;
+if ($Dv == 0) $Dv = 0;
+if ($Dv == 1) $Dv = 0;
+if ($Dv > 9) $Dv = 0;
+
+$dadosboleto["nosso_numero"] = $nossoNumero . $Dv;
+
+
+
+
+//agencia e conta
+$agencia_codigo = $agencia ." / ". $convenio;
+
+// Nosso número de até 8 dígitos - 2 digitos para o ano e outros 6 numeros sequencias por ano
+// deve ser gerado no programa boleto_bancoob.php
+$nossonumero = formata_numero($dadosboleto["nosso_numero"],8,0);
+
+
+$campolivre  = "$modalidadecobranca$convenio$nossonumero$numeroparcela";
+
+$dv=modulo_11("$codigobanco$nummoeda$fator_vencimento$valor$carteira$agencia$campolivre");
+$linha="$codigobanco$nummoeda$dv$fator_vencimento$valor$carteira$agencia$campolivre";
+
+
+$dadosboleto["codigo_barras"] = $linha;
+$dadosboleto["linha_digitavel"] = monta_linha_digitavel($linha);
+$dadosboleto["agencia_codigo"] = $agencia_codigo;
+$dadosboleto["nosso_numero"] = $nossoNumero;
+$dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">

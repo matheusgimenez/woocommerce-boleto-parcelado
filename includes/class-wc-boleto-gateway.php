@@ -827,6 +827,10 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			if($i == 1){
 				$data[$i]['data_vencimento'] = date( 'd/m/Y', time() + ( absint( $this->boleto_first_time ) * 86400 ) );
 			}
+			elseif($i == 2){
+				$boleto_time->modify('+'.$this->boleto_first_time.' days');
+				$data[$i]['data_vencimento'] = $boleto_time->format('d/m/Y');
+			}
 			else{
 				$data[$i]['data_vencimento'] = $boleto_time->format('d/m/Y');
 			}

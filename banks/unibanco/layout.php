@@ -27,6 +27,46 @@
 // +----------------------------------------------------------------------+
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly.
+$codigobanco = "409";
+$codigo_banco_com_dv = geraCodigoBanco( $codigobanco );
+$nummoeda = "9";
+$fator_vencimento = fator_vencimento( $dadosboleto["data_vencimento"] );
+$cvt = "5";
+$zero = "00";
+
+//valor tem 10 digitos, sem virgula
+$valor = formata_numero( $dadosboleto["valor_boleto"], 10, 0, "valor" );
+//agencia é 4 digitos
+$agencia = formata_numero( $dadosboleto["agencia"], 4, 0 );
+//conta é 6 digitos + 1 do dv
+$conta = formata_numero( $dadosboleto["conta"], 6, 0 );
+//dv da conta
+$conta_dv = formata_numero( $dadosboleto["conta_dv"], 1, 0 );
+//carteira é 2 digitos
+$carteira = $dadosboleto["carteira"];
+
+//nosso número (sem dv) é 14 digitos
+$nnum = formata_numero( $dadosboleto["nosso_numero"], 14, 0 );
+//dv do nosso número
+$dv_nosso_numero = modulo_11( $nnum );
+$nossonumero_dv = "$nnum$dv_nosso_numero";
+
+//codigo_cliente é 6 digitos + 1 do dv
+$codigo_cliente = formata_numero( $dadosboleto["codigo_cliente"], 7, 0 );
+
+// 43 numeros para o calculo do digito verificador
+$dv = digitoVerificador( "$codigobanco$nummoeda$fator_vencimento$valor$cvt$codigo_cliente$zero$nossonumero_dv" );
+// Numero para o codigo de barras com 44 digitos
+$linha = "$codigobanco$nummoeda$dv$fator_vencimento$valor$cvt$codigo_cliente$zero$nossonumero_dv"; //ok
+
+$nossonumero = substr( $nossonumero_dv, 0, 14 ).'-'.substr( $nossonumero_dv, 14, 1 );
+$agencia_codigo = $agencia." / ". $conta ."-". $conta_dv;
+
+$dadosboleto["codigo_barras"] = $linha;
+$dadosboleto["linha_digitavel"] = monta_linha_digitavel( $linha );
+$dadosboleto["agencia_codigo"] = $agencia_codigo;
+$dadosboleto["nosso_numero"] = $nossonumero;
+$dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 ?>
 <!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.0 Transitional//EN'>
 <html>

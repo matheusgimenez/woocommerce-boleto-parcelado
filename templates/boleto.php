@@ -31,6 +31,8 @@ if ( isset( $boleto_code ) ) {
 		if( $bank ){
 			include plugin_dir_path( dirname( __FILE__ ) ) . 'banks/' . $bank . '/functions.php';
 		}
+		global $loop_boleto;
+		$loop_boleto = false; //variable to prevent duplicated functions
 		// Gets current bank.
 		foreach ($order_data as $all_data) {
 
@@ -89,6 +91,7 @@ if ( isset( $boleto_code ) ) {
 
 			    // Include bank templates.
 			    include plugin_dir_path( dirname( __FILE__ ) ) . 'banks/' . $bank . '/layout.php';
+			    $loop_boleto = true; //variable to prevent duplicated functions
 			}
 		}
 		exit;

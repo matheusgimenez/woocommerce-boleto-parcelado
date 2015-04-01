@@ -79,7 +79,6 @@ $dadosboleto["linha_digitavel"] = monta_linha_digitavel( $linha );
 $dadosboleto["agencia_codigo"] = $agencia_codigo;
 $dadosboleto["nosso_numero"] = $nossonumero;
 $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
-
 function digitoVerificador_nossonumero( $numero ) {
     $resto2 = modulo_11( $numero, 9, 1 );
     $digito = 11 - $resto2;
