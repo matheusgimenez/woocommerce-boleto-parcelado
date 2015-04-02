@@ -28,6 +28,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		$this->boleto_first_time = $this->get_option( 'boleto_first_time' );
 		$this->min_value   = intval($this->get_option( 'boleto_minimum' ));
 		$this->max_plots   = intval($this->get_option( 'boleto_max_plots' ));
+		$this->rate        = intval($this->get_option( 'boleto_rate' ));
 
 		// Actions.
 		add_action( 'woocommerce_thankyou_boleto', array( $this, 'thankyou_page' ) );
@@ -162,6 +163,11 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			),
 		    'boleto_max_plots' => array(
 				'title'       => __( 'Maximum plots', 'woocommerce-boleto-parcelado' ),
+				'type'        => 'text',
+				'desc_tip'    => true,
+			),
+			'boleto_rate' => array(
+				'title'       => __( 'Percent rate in plots', 'woocommerce-boleto-parcelado' ),
 				'type'        => 'text',
 				'desc_tip'    => true,
 			),
@@ -739,8 +745,16 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			$item_price = $price / $i;
 			$item_price = round($item_price);
 
+			if(!empty($this->rate) && $i != 1){
+				$rate = str_replace('%', '', $this->rate);
+				$rate = intval($rate);
+				$value = ($rate / 100) * $item_price;
+				$item_price = $item_price + $value;
+			}
+			$item_price = wc_price($item_price);
+
 			echo '<option value="'.$i.'">';
-			echo sprintf(__('%sx of %s%s','woocommerce-boleto-parcelado'),$i,$item_price,get_woocommerce_currency_symbol());
+			echo sprintf(__('%sx of %s','woocommerce-boleto-parcelado'),$i,$item_price);
 			echo '</option>';
 		}
 		echo '</select>';
@@ -819,6 +833,12 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			$data[$i] = array();
 			$item_price = intval($this->get_order_total()) / $plots;
 			$item_price = round($item_price);
+			if(!empty($this->rate) && $i != 1){
+				$rate = str_replace('%', '', $this->rate);
+				$rate = intval($rate);
+				$value = ($rate / 100) * $item_price;
+				$item_price = $item_price + $value;
+			}
 			$boleto_time->modify('+'.$this->boleto_time.' days');
 
 			$data[$i]['valor'] = $item_price;
