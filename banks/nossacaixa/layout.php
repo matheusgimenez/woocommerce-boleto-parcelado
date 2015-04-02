@@ -163,7 +163,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" width="666">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/6.png" width="665" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/6.png" width="665" border="0">
 					</td>
 				</tr>
 				<tr>
@@ -198,10 +198,10 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 		<table cellspacing="0" cellpadding="0" width="666" border="0">
 			<tr>
 				<td class="cp" width="150">
-					<span class="campo"><img src="<?php echo wcboleto_assets_url(); ?>images/logonossacaixa.jpg" width="150" height="40" border="0"></span>
+					<span class="campo"><img src="<?php echo wcboleto_parcelado_assets_url(); ?>images/logonossacaixa.jpg" width="150" height="40" border="0"></span>
 				</td>
 				<td width="3" valign="bottom">
-					<img height="22" src="<?php echo wcboleto_assets_url(); ?>images/3.png" width="2" border="0">
+					<img height="22" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/3.png" width="2" border="0">
 				</td>
 				<td class="cpt" width="58" valign="bottom">
 					<div align="center">
@@ -209,7 +209,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 					</div>
 				</td>
 				<td width="3" valign="bottom">
-					<img height="22" src="<?php echo wcboleto_assets_url(); ?>images/3.png" width="2" border="0">
+					<img height="22" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/3.png" width="2" border="0">
 				</td>
 				<td class="ld" align="right" width="453" valign="bottom">
 					<span class="ld"><span class="campotitulo"><?php echo $dadosboleto["linha_digitavel"]?></span></span>
@@ -218,7 +218,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td colspan="5">
-						<img height="2" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="666" border="0">
+						<img height="2" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="666" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -227,31 +227,31 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="298" height="13">
 						<?php _e( 'Cedente', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="126" height="13">
 						<?php _e( 'Ag&ecirc;ncia/C&oacute;digo do Cedente', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="34" height="13">
 						<?php _e( 'Esp&eacute;cie', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="53" height="13">
 						<?php _e( 'Quantidade', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="120" height="13">
 						<?php _e( 'Nosso n&uacute;mero', 'woocommerce-boleto' ); ?>
@@ -259,31 +259,31 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="298" height="12">
 						<span class="campo"><?php echo $dadosboleto["cedente"]; ?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="126" height="12">
 						<span class="campo"><?php echo $dadosboleto["agencia_codigo"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="34" height="12">
 						<span class="campo"><?php echo $dadosboleto["especie"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="53" height="12">
 						<span class="campo"><?php echo $dadosboleto["quantidade"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="120" height="12">
 						<span class="campo"><?php echo $dadosboleto["nosso_numero"]?></span>
@@ -291,34 +291,34 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="298" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="298" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="298" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="126" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="126" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="126" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="34" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="34" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="34" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="53" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="53" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="53" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="120" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="120" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="120" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -327,25 +327,25 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" colspan="3" height="13">
 						<?php _e( 'N&uacute;mero do documento', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="132" height="13">
 						<?php _e( 'CPF/CNPJ', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="134" height="13">
 						<?php _e( 'Vencimento', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="180" height="13">
 						<?php _e( 'Valor documento', 'woocommerce-boleto' ); ?>
@@ -353,25 +353,25 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" colspan="3" height="12">
 						<span class="campo"><?php echo $dadosboleto["numero_documento"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="132" height="12">
 						<span class="campo"><?php echo $dadosboleto["cpf_cnpj"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="134" height="12">
 						<span class="campo"><?php echo $dadosboleto["data_vencimento"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="180" height="12">
 						<span class="campo"><?php echo $dadosboleto["valor_boleto"]?></span>
@@ -379,34 +379,34 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="113" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="113" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="113" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="72" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="72" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="72" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="132" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="132" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="132" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="134" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="134" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="134" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="180" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -415,31 +415,31 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="113" height="13">
 						<?php _e( '(-) Desconto / Abatimentos', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="112" height="13">
 						<?php _e( '(-) Outras dedu&ccedil;&otilde;es', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="113" height="13">
 						<?php _e( '(+) Mora / Multa', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="113" height="13">
 						<?php _e( '(+) Outros acr&eacute;scimos', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="180" height="13">
 						<?php _e( '(=) Valor cobrado', 'woocommerce-boleto' ); ?>
@@ -447,56 +447,56 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="113" height="12"></td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="112" height="12"></td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="113" height="12"></td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="113" height="12"></td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="180" height="12"></td>
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="113" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="113" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="113" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="112" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="112" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="112" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="113" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="113" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="113" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="113" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="113" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="113" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="180" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -505,7 +505,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="659" height="13">
 						<?php _e( 'Sacado', 'woocommerce-boleto' ); ?>
@@ -513,7 +513,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="659" height="12">
 						<span class="campo"><?php echo $dadosboleto["sacado"]?></span>
@@ -521,10 +521,10 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="659" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="659" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="659" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -580,7 +580,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="ct" width="666">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/6.png" width="665" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/6.png" width="665" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -588,10 +588,10 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 		<table cellspacing="0" cellpadding="0" width="666" border="0">
 			<tr>
 				<td class="cp" width="150">
-					<span class="campo"><img src="<?php echo wcboleto_assets_url(); ?>images/logonossacaixa.jpg" width="150" height="40" border="0"></span>
+					<span class="campo"><img src="<?php echo wcboleto_parcelado_assets_url(); ?>images/logonossacaixa.jpg" width="150" height="40" border="0"></span>
 				</td>
 				<td width="3" valign="bottom">
-					<img height="22" src="<?php echo wcboleto_assets_url(); ?>images/3.png" width="2" border="0">
+					<img height="22" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/3.png" width="2" border="0">
 				</td>
 				<td class="cpt" width="58" valign="bottom">
 					<div align="center">
@@ -599,7 +599,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 					</div>
 				</td>
 				<td width="3" valign="bottom">
-					<img height="22" src="<?php echo wcboleto_assets_url(); ?>images/3.png" width="2" border="0">
+					<img height="22" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/3.png" width="2" border="0">
 				</td>
 				<td class="ld" align="right" width="453" valign="bottom">
 					<span class="ld"><span class="campotitulo"><?php echo $dadosboleto["linha_digitavel"]?></span></span>
@@ -608,7 +608,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td colspan="5">
-						<img height="2" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="666" border="0">
+						<img height="2" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="666" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -617,13 +617,13 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="472" height="13">
 						<?php _e( 'Local de pagamento', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="180" height="13">
 						<?php _e( 'Vencimento', 'woocommerce-boleto' ); ?>
@@ -631,13 +631,13 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="472" height="12">
 						<?php _e( 'Pag&aacute;vel em qualquer Banco at&eacute; o vencimento', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="180" height="12">
 						<span class="campo"><?php echo $dadosboleto["data_vencimento"]?></span>
@@ -645,16 +645,16 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="472" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="472" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="472" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="180" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -663,13 +663,13 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="472" height="13">
 						<?php _e( 'Cedente', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="180" height="13">
 						<?php _e( 'Ag&ecirc;ncia/C&oacute;digo cedente', 'woocommerce-boleto' ); ?>
@@ -677,13 +677,13 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="472" height="12">
 						<span class="campo"><?php echo $dadosboleto["cedente"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="180" height="12">
 						<span class="campo"><?php echo $dadosboleto["agencia_codigo"]?></span>
@@ -691,16 +691,16 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="472" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="472" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="472" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="180" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -709,37 +709,37 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="113" height="13">
 						<?php _e( 'Data do documento', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="153" height="13">
 						<?php _e( 'N<u>o</u> documento', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="62" height="13">
 						<?php _e( 'Esp&eacute;cie doc.', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="34" height="13">
 						<?php _e( 'Aceite', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="82" height="13">
 						<?php _e( 'Data processamento', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="180" height="13">
 						<?php _e( 'Nosso n&uacute;mero', 'woocommerce-boleto' ); ?>
@@ -747,7 +747,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="113" height="12">
 						<div align="left">
@@ -755,13 +755,13 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 						</div>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="153" height="12">
 						<span class="campo"><?php echo $dadosboleto["numero_documento"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="62" height="12">
 						<div align="left">
@@ -769,7 +769,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 						</div>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="34" height="12">
 						<div align="left">
@@ -777,7 +777,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 						</div>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="82" height="12">
 						<div align="left">
@@ -785,7 +785,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 						</div>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="180" height="12">
 						<span class="campo"><?php echo $dadosboleto["nosso_numero"]?></span>
@@ -793,40 +793,40 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="113" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="113" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="113" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="153" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="153" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="153" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="62" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="62" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="62" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="34" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="34" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="34" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="82" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="82" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="82" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="180" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -835,37 +835,37 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" colspan="3" height="13">
 						<?php _e( 'Uso do banco', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" height="13" width="7">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="83" height="13">
 						<?php _e( 'Carteira', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" height="13" width="7">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="53" height="13">
 						<?php _e( 'Esp&eacute;cie', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" height="13" width="7">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="123" height="13">
 						<?php _e( 'Quantidade', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" height="13" width="7">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="72" height="13">
 						<?php _e( 'Valor Documento', 'woocommerce-boleto' ); ?>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="180" height="13">
 						<?php _e( '(=) Valor documento', 'woocommerce-boleto' ); ?>
@@ -873,13 +873,13 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td valign="top" class="cp" height="12" colspan="3">
 						<div align="left"></div>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="83">
 						<div align="left">
@@ -887,7 +887,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 						</div>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="53">
 						<div align="left">
@@ -895,19 +895,19 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 						</div>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="123">
 						<span class="campo"><?php echo $dadosboleto["quantidade"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="72">
 						<span class="campo"><?php echo $dadosboleto["valor_unitario"]?></span>
 					</td>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" align="right" width="180" height="12">
 						<span class="campo"><?php echo $dadosboleto["valor_boleto"]?></span>
@@ -915,46 +915,46 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="75" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="75" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="31" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="31" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="31" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="83" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="83" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="83" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="53" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="53" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="53" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="123" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="123" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="123" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="72" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="72" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="72" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="180" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -967,17 +967,17 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td valign="top" width="7" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="1" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="1" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -997,7 +997,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="ct" valign="top" width="180" height="13">
 										<?php _e( '(-) Desconto / Abatimentos', 'woocommerce-boleto' ); ?>
@@ -1005,16 +1005,16 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="cp" valign="top" align="right" width="180" height="12"></td>
 								</tr>
 								<tr>
 									<td valign="top" width="7" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 									</td>
 									<td valign="top" width="180" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -1027,17 +1027,17 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td valign="top" width="7" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="1" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="1" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -1048,7 +1048,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="ct" valign="top" width="180" height="13">
 										<?php _e( '(-) Outras dedu&ccedil;&otilde;es', 'woocommerce-boleto' ); ?>
@@ -1056,16 +1056,16 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="cp" valign="top" align="right" width="180" height="12"></td>
 								</tr>
 								<tr>
 									<td valign="top" width="7" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 									</td>
 									<td valign="top" width="180" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -1078,17 +1078,17 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td valign="top" width="7" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="1" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="1" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -1099,7 +1099,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="ct" valign="top" width="180" height="13">
 										<?php _e( '(+) Mora / Multa', 'woocommerce-boleto' ); ?>
@@ -1107,16 +1107,16 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="cp" valign="top" align="right" width="180" height="12"></td>
 								</tr>
 								<tr>
 									<td valign="top" width="7" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 									</td>
 									<td valign="top" width="180" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -1129,17 +1129,17 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td valign="top" width="7" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="1" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="1" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -1150,7 +1150,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="ct" valign="top" width="180" height="13">
 										<?php _e( '(+) Outros acr&eacute;scimos', 'woocommerce-boleto' ); ?>
@@ -1158,16 +1158,16 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="cp" valign="top" align="right" width="180" height="12"></td>
 								</tr>
 								<tr>
 									<td valign="top" width="7" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 									</td>
 									<td valign="top" width="180" height="1">
-										<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+										<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -1180,12 +1180,12 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 								</tr>
 							</tbody>
@@ -1196,7 +1196,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 							<tbody>
 								<tr>
 									<td class="ct" valign="top" width="7" height="13">
-										<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="ct" valign="top" width="180" height="13">
 										<?php _e( '(=) Valor cobrado', 'woocommerce-boleto' ); ?>
@@ -1204,7 +1204,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 								</tr>
 								<tr>
 									<td class="cp" valign="top" width="7" height="12">
-										<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+										<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 									</td>
 									<td class="cp" valign="top" align="right" width="180" height="12"></td>
 								</tr>
@@ -1218,7 +1218,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td valign="top" width="666" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="666" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="666" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -1227,7 +1227,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="659" height="13">
 						<?php _e( 'Sacado', 'woocommerce-boleto' ); ?>
@@ -1235,7 +1235,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="659" height="12">
 						<span class="campo"><?php echo $dadosboleto["sacado"]?></span>
@@ -1247,7 +1247,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="cp" valign="top" width="7" height="12">
-						<img height="12" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="12" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="659" height="12">
 						<span class="campo"><?php echo $dadosboleto["endereco1"]?></span>
@@ -1259,13 +1259,13 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 			<tbody>
 				<tr>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="cp" valign="top" width="472" height="13">
 						<span class="campo"><?php echo $dadosboleto["endereco2"]?></span>
 					</td>
 					<td class="ct" valign="top" width="7" height="13">
-						<img height="13" src="<?php echo wcboleto_assets_url(); ?>images/1.png" width="1" border="0">
+						<img height="13" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/1.png" width="1" border="0">
 					</td>
 					<td class="ct" valign="top" width="180" height="13">
 						<?php _e( 'C&oacute;d. baixa', 'woocommerce-boleto' ); ?>
@@ -1273,16 +1273,16 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="472" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="472" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="472" border="0">
 					</td>
 					<td valign="top" width="7" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="7" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="7" border="0">
 					</td>
 					<td valign="top" width="180" height="1">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/2.png" width="180" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/2.png" width="180" border="0">
 					</td>
 				</tr>
 			</tbody>
@@ -1328,7 +1328,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
 				</tr>
 				<tr>
 					<td class="ct" width="666">
-						<img height="1" src="<?php echo wcboleto_assets_url(); ?>images/6.png" width="665" border="0">
+						<img height="1" src="<?php echo wcboleto_parcelado_assets_url(); ?>images/6.png" width="665" border="0">
 					</td>
 				</tr>
 			</tbody>

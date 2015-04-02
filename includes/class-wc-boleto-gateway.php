@@ -26,6 +26,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		$this->description = $this->get_option( 'description' );
 		$this->boleto_time = $this->get_option( 'boleto_time' );
 		$this->boleto_first_time = $this->get_option( 'boleto_first_time' );
+		$this->boleto_second_time = $this->get_option( 'boleto_second_time' );
 		$this->min_value   = intval($this->get_option( 'boleto_minimum' ));
 		$this->max_plots   = intval($this->get_option( 'boleto_max_plots' ));
 		$this->rate        = intval($this->get_option( 'boleto_rate' ));
@@ -155,6 +156,13 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 				'description' => __( 'Number of days to pay.', 'woocommerce-boleto-parcelado' ),
 				'desc_tip'    => true,
 				'default'     => 5
+			),
+			'boleto_second_time' => array(
+				'title'       => __( 'Deadline to pay the Second Ticket', 'woocommerce-boleto-parcelado' ),
+				'type'        => 'text',
+				'description' => __( 'Number of days to pay.', 'woocommerce-boleto-parcelado' ),
+				'desc_tip'    => true,
+				'default'     => 35
 			),
 			'boleto_minimum' => array(
 				'title'       => __( 'Minimum value for ticket appear', 'woocommerce-boleto-parcelado' ),
@@ -848,8 +856,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 				$data[$i]['data_vencimento'] = date( 'd/m/Y', time() + ( absint( $this->boleto_first_time ) * 86400 ) );
 			}
 			elseif($i == 2){
-				$boleto_time->modify('+'.$this->boleto_first_time.' days');
-				$data[$i]['data_vencimento'] = $boleto_time->format('d/m/Y');
+				$data[$i]['data_vencimento'] = date( 'd/m/Y', time() + ( absint( $this->boleto_second_time ) * 86400 ) );
 			}
 			else{
 				$data[$i]['data_vencimento'] = $boleto_time->format('d/m/Y');

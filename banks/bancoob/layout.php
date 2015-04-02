@@ -654,7 +654,7 @@ $dadosboleto["codigo_banco_com_dv"] = $codigo_banco_com_dv;
                 <tbody>
                     <tr>
                         <td width="150">
-                            <img src="<?php echo wcboleto_assets_url(); ?>images/logobancoob.jpg" alt="Logo" />
+                            <img src="<?php echo wcboleto_parcelado_assets_url(); ?>images/logobancoob.jpg" alt="Logo" />
                         </td>
                         <td width="50">
                     <div class="field_cod_banco">

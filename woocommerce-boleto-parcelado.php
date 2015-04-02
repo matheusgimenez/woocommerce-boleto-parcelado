@@ -238,6 +238,6 @@ endif;
  *
  * @return string
  */
-function wcboleto_assets_url() {
+function wcboleto_parcelado_assets_url() {
 	return plugin_dir_url( __FILE__ ) . 'assets/';
 }

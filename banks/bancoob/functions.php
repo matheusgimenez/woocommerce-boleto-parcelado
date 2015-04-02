@@ -98,10 +98,10 @@ function fbarcode($valor){
 
 
 // Guarda inicial
-    ?><img src=<?php echo wcboleto_assets_url(); ?>images/p.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
-        src=<?php echo wcboleto_assets_url(); ?>images/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
-        src=<?php echo wcboleto_assets_url(); ?>images/p.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
-        src=<?php echo wcboleto_assets_url(); ?>images/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
+    ?><img src=<?php echo wcboleto_parcelado_assets_url(); ?>images/p.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
+        src=<?php echo wcboleto_parcelado_assets_url(); ?>images/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
+        src=<?php echo wcboleto_parcelado_assets_url(); ?>images/p.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
+        src=<?php echo wcboleto_parcelado_assets_url(); ?>images/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
     <?php
     $texto = $valor ;
     if((strlen($texto) % 2) <> 0){
@@ -120,7 +120,7 @@ function fbarcode($valor){
                 $f1 = $largo ;
             }
             ?>
-            src=<?php echo wcboleto_assets_url(); ?>images/p.png width=<?php echo $f1?> height=<?php echo $altura?> border=0><img
+            src=<?php echo wcboleto_parcelado_assets_url(); ?>images/p.png width=<?php echo $f1?> height=<?php echo $altura?> border=0><img
                 <?php
                 if (substr($f,$i,1) == "0") {
                     $f2 = $fino ;
@@ -128,16 +128,16 @@ function fbarcode($valor){
                     $f2 = $largo ;
                 }
                 ?>
-                src=<?php echo wcboleto_assets_url(); ?>images/b.png width=<?php echo $f2?> height=<?php echo $altura?> border=0><img
+                src=<?php echo wcboleto_parcelado_assets_url(); ?>images/b.png width=<?php echo $f2?> height=<?php echo $altura?> border=0><img
         <?php
         }
     }
 
 // Draw guarda final
     ?>
-    src=<?php echo wcboleto_assets_url(); ?>images/p.png width=<?php echo $largo?> height=<?php echo $altura?> border=0><img
-        src=<?php echo wcboleto_assets_url(); ?>images/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
-        src=<?php echo wcboleto_assets_url(); ?>images/p.png width=<?php echo 1?> height=<?php echo $altura?> border=0>
+    src=<?php echo wcboleto_parcelado_assets_url(); ?>images/p.png width=<?php echo $largo?> height=<?php echo $altura?> border=0><img
+        src=<?php echo wcboleto_parcelado_assets_url(); ?>images/b.png width=<?php echo $fino?> height=<?php echo $altura?> border=0><img
+        src=<?php echo wcboleto_parcelado_assets_url(); ?>images/p.png width=<?php echo 1?> height=<?php echo $altura?> border=0>
 <?php
 } //Fim da função
 
