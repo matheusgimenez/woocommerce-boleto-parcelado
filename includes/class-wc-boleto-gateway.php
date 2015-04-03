@@ -15,7 +15,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		$this->id           = 'boleto';
 		$this->icon         = apply_filters( 'wcboleto_icon', plugins_url( 'assets/images/boleto.png', plugin_dir_path( __FILE__ ) ) );
 		$this->has_fields   = true;
-		$this->method_title = __( 'Banking Ticket', 'woocommerce-boleto-parcelado' );
+		$this->method_title = __( 'Banking Ticket Installments', 'woocommerce-boleto-parcelado' );
 
 		// Load the settings.
 		$this->init_form_fields();
@@ -175,7 +175,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 				'desc_tip'    => true,
 			),
 			'boleto_rate' => array(
-				'title'       => __( 'Percent rate in plots', 'woocommerce-boleto-parcelado' ),
+				'title'       => __( 'Tax rate in each plots', 'woocommerce-boleto-parcelado' ),
 				'type'        => 'text',
 				'desc_tip'    => true,
 			),
