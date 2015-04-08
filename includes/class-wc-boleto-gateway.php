@@ -758,11 +758,16 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 				$rate = intval($rate);
 				$value = ($rate / 100) * $item_price;
 				$item_price = $item_price + $value;
+				$tax = $rate . '%';
+				$tax = sprintf(__('%s interest','woocommerce-boleto-parcelado'),$tax);
+			}
+			elseif(!empty($this->rate) && $i == 1){
+				$tax = __('No interest','woocommerce-boleto-parcelado');
 			}
 			$item_price = wc_price($item_price);
 
 			echo '<option value="'.$i.'">';
-			echo sprintf(__('%sx of %s','woocommerce-boleto-parcelado'),$i,$item_price);
+			echo sprintf(__('%sx of %s (%s)','woocommerce-boleto-parcelado'),$i,$item_price,$tax);
 			echo '</option>';
 		}
 		echo '</select>';
@@ -841,7 +846,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			$data[$i] = array();
 			$item_price = intval($this->get_order_total()) / $plots;
 			$item_price = round($item_price);
-			if(!empty($this->rate) && $i != 1){
+			if(!empty($this->rate) && $plots != 1){
 				$rate = str_replace('%', '', $this->rate);
 				$rate = intval($rate);
 				$value = ($rate / 100) * $item_price;

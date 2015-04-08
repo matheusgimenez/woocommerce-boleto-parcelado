@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: WooCommerce Boleto v1.3.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: Thu Apr 02 2015 21:30:23 GMT-0300 (BRT)\n"
+"PO-Revision-Date: Tue Apr 07 2015 22:30:09 GMT-0300 (BRT)\n"
 "Last-Translator: matheus <matheus@brasa.art.br>\n"
 "Language-Team: \n"
 "Language: Portuguese (Brazil)\n"
@@ -27,8 +27,8 @@ msgstr ""
 "X-Loco-Target-Locale: pt_BR"
 
 #: ../woocommerce-boleto-parcelado.php:198 ../includes/class-wc-boleto-admin.php:
-#: 161 ../includes/class-wc-boleto-gateway.php:814 ../includes/class-wc-boleto-
-#: gateway.php:893
+#: 161 ../includes/class-wc-boleto-gateway.php:819 ../includes/class-wc-boleto-
+#: gateway.php:898
 msgid "Pay the Ticket &rarr;"
 msgstr "Pagar Boleto &rarr;"
 
@@ -40,7 +40,7 @@ msgstr ""
 "este produto."
 
 #: ../woocommerce-boleto-parcelado.php:201 ../includes/class-wc-boleto-gateway.
-#: php:817 ../includes/class-wc-boleto-gateway.php:888
+#: php:822 ../includes/class-wc-boleto-gateway.php:893
 msgid ""
 "Please click the following button and pay the Ticket in your Internet "
 "Banking."
@@ -49,7 +49,7 @@ msgstr ""
 "Banking."
 
 #: ../woocommerce-boleto-parcelado.php:202 ../includes/class-wc-boleto-gateway.
-#: php:818 ../includes/class-wc-boleto-gateway.php:889
+#: php:823 ../includes/class-wc-boleto-gateway.php:894
 msgid "If you prefer, print and pay at any bank branch or lottery retailer."
 msgstr "Se preferir, imprima e pague em qualquer agência bancária ou casa lotérica."
 
@@ -1134,30 +1134,39 @@ msgstr "Descrição da carteira"
 msgid "<label>Select number of plots</label>"
 msgstr "<label>Selecione o numero de parcelas</label>"
 
-#: ../includes/class-wc-boleto-gateway.php:765
+#: ../includes/class-wc-boleto-gateway.php:762
 #, php-format
-msgid "%sx of %s"
-msgstr "%sx de %s"
+msgid "%s interest"
+msgstr "%s de juros"
 
-#: ../includes/class-wc-boleto-gateway.php:782
+#: ../includes/class-wc-boleto-gateway.php:765
+msgid "No interest"
+msgstr "Sem juros"
+
+#: ../includes/class-wc-boleto-gateway.php:770
+#, php-format
+msgid "%sx of %s (%s)"
+msgstr "%sx de %s (%s)"
+
+#: ../includes/class-wc-boleto-gateway.php:787
 msgid "Awaiting boleto payment"
 msgstr "Aguardando pagamento do Boleto"
 
-#: ../includes/class-wc-boleto-gateway.php:816 ../includes/class-wc-boleto-
-#: gateway.php:887
+#: ../includes/class-wc-boleto-gateway.php:821 ../includes/class-wc-boleto-
+#: gateway.php:892
 #, php-format
 msgid "%sAttention!%s You will not get the ticket by Correios."
 msgstr "%sAtenção!%s Você não receberá o boleto pelos Correios."
 
-#: ../includes/class-wc-boleto-gateway.php:883
+#: ../includes/class-wc-boleto-gateway.php:888
 msgid "Payment"
 msgstr "Pagamento"
 
-#: ../includes/class-wc-boleto-gateway.php:918
+#: ../includes/class-wc-boleto-gateway.php:923
 msgid "Boleto Disabled"
 msgstr "Boleto Desabilitado"
 
-#: ../includes/class-wc-boleto-gateway.php:918
+#: ../includes/class-wc-boleto-gateway.php:923
 #, php-format
 msgid ""
 "Currency <code>%s</code> is not supported. Works only with <code>BRL</code> "
