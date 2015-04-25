@@ -764,6 +764,9 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			elseif(!empty($this->rate) && $i == 1){
 				$tax = __('No interest','woocommerce-boleto-parcelado');
 			}
+			elseif(empty($this->rate) || intval($this->rate) == 0){
+				$tax = __('No interest','woocommerce-boleto-parcelado');
+			}
 			$item_price = wc_price($item_price);
 
 			echo '<option value="'.$i.'">';
