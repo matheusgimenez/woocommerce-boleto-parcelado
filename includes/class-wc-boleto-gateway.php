@@ -12,7 +12,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 	 * @return void
 	 */
 	public function __construct() {
-		$this->id           = 'boleto';
+		$this->id           = 'boleto-parcelado';
 		$this->icon         = apply_filters( 'wcboleto_icon', plugins_url( 'assets/images/boleto.png', plugin_dir_path( __FILE__ ) ) );
 		$this->has_fields   = true;
 		$this->method_title = __( 'Banking Ticket Installments', 'woocommerce-boleto-parcelado' );
