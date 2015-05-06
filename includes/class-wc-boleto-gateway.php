@@ -32,7 +32,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		$this->rate        = intval($this->get_option( 'boleto_rate' ));
 
 		// Actions.
-		add_action( 'woocommerce_thankyou_boleto', array( $this, 'thankyou_page' ) );
+		add_action( 'woocommerce_thankyou_boleto-parcelado', array( $this, 'thankyou_page' ) );
 		add_action( 'woocommerce_email_after_order_table', array( $this, 'email_instructions' ), 10, 2 );
 		add_action( 'woocommerce_update_options_payment_gateways_' . $this->id, array( $this, 'process_admin_options' ) );
 
@@ -86,14 +86,34 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 	 */
 	public function is_available() {
 		// Test if is valid for use.
-		if('yes' == $this->get_option( 'enabled' ) && $this->using_supported_currency() && $this->get_order_total() >= $this->min_value){
+		if('yes' == $this->get_option( 'enabled' ) && $this->using_supported_currency()){
 			return 'yes';
 		}
 		else{
 			return null;
 		}
 	}
-
+	/**
+	 * Get max plots.
+	 *
+	 * @return array max_plots and value.
+	 */
+	private function get_max_plots($value, $return_value = false){
+		for ($i = 1; $i < $this->max_plots; $i++) {
+			$next = $i + 1;
+			$next_value = intval($value) / $next;
+			if($next == intval($this->max_plots) || $next_value < intval($this->min_value)){
+				$value_return = intval($value) / $i;
+				if($return_value == true){
+					return array('plots' => $i, 'value' => $value_return);
+				}
+				else{
+					return $i;
+				}
+				break;
+			}
+		}
+	}
 	/**
 	 * Admin Panel Options.
 	 *
@@ -735,7 +755,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 	 *
 	 */
 	public function validate_fields(){
-		if(intval($_POST['woocommerce-boleto-parcelado-value']) > $this->max_plots || intval($this->get_order_total()) < $this->min_value){
+		if(intval($_POST['woocommerce-boleto-parcelado-value']) > $this->get_max_plots($this->get_order_total())){
 			return false;
 		}
 		return true;
@@ -749,9 +769,9 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 
 		_e('<label>Select number of plots</label>','woocommerce-boleto-parcelado');
 		echo '<select name="woocommerce-boleto-parcelado-value">';
-		for ($i=1; $i <= $this->max_plots; $i++) {
+		$max_plots = $this->get_max_plots($this->get_order_total());
+		for ($i=1; $i <= $max_plots; $i++) {
 			$item_price = $price / $i;
-			$item_price = round($item_price);
 
 			if(!empty($this->rate) && $i != 1){
 				$rate = str_replace('%', '', $this->rate);
@@ -825,7 +845,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		$message .= __( 'Please click the following button and pay the Ticket in your Internet Banking.', 'woocommerce-boleto-parcelado' ) . '<br />';
 		$message .= __( 'If you prefer, print and pay at any bank branch or lottery retailer.', 'woocommerce-boleto-parcelado' ) . '<br />';
 
-		$html .= apply_filters( 'wcboleto_thankyou_page_message', $message );
+		$html .= apply_filters( 'wcboleto_parcelado_thankyou_page_message', $message );
 
 		//$html .= '<strong style="display: block; margin-top: 15px; font-size: 0.8em">' . sprintf( __( 'Validity of the Ticket: %s.', 'woocommerce-boleto-parcelado' ), date( 'd/m/Y', time() + ( absint( $this->boleto_time ) * 86400 ) ) ) . '</strong>';
 
@@ -848,7 +868,6 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		for ($i=1; $i <= $plots; $i++) {
 			$data[$i] = array();
 			$item_price = intval($this->get_order_total()) / $plots;
-			$item_price = round($item_price);
 			if(!empty($this->rate) && $plots != 1){
 				$rate = str_replace('%', '', $this->rate);
 				$rate = intval($rate);

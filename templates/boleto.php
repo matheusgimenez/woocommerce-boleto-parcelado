@@ -26,13 +26,11 @@ if ( isset( $boleto_code ) ) {
 		// Gets the data saved from boleto.
 		$order = new WC_Order( $order_id );
 		$order_data = get_post_meta( $order_id, 'wc_boleto_data', true );
-		$settings = get_option( 'woocommerce_boleto_settings' );
+		$settings = get_option( 'woocommerce_boleto-parcelado_settings' );
 		$bank = sanitize_text_field( $settings['bank'] );
 		if( $bank ){
 			include plugin_dir_path( dirname( __FILE__ ) ) . 'banks/' . $bank . '/functions.php';
 		}
-		global $loop_boleto;
-		$loop_boleto = false; //variable to prevent duplicated functions
 		// Gets current bank.
 		foreach ($order_data as $all_data) {
 
