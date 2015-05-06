@@ -30,6 +30,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 		$this->min_value   = intval($this->get_option( 'boleto_minimum' ));
 		$this->max_plots   = intval($this->get_option( 'boleto_max_plots' ));
 		$this->rate        = intval($this->get_option( 'boleto_rate' ));
+		$this->first_rate  = intval($this->get_option( 'boleto_first_rate' ));
 
 		// Actions.
 		add_action( 'woocommerce_thankyou_boleto-parcelado', array( $this, 'thankyou_page' ) );
@@ -196,6 +197,11 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			),
 			'boleto_rate' => array(
 				'title'       => __( 'Tax rate in each plots', 'woocommerce-boleto-parcelado' ),
+				'type'        => 'text',
+				'desc_tip'    => true,
+			),
+			'boleto_first_rate' => array(
+				'title'       => __( 'Tax rate in unique installment', 'woocommerce-boleto-parcelado' ),
 				'type'        => 'text',
 				'desc_tip'    => true,
 			),
@@ -781,8 +787,18 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 				$tax = $rate . '%';
 				$tax = sprintf(__('%s interest','woocommerce-boleto-parcelado'),$tax);
 			}
-			elseif(!empty($this->rate) && $i == 1){
-				$tax = __('No interest','woocommerce-boleto-parcelado');
+			elseif($i == 1){
+				if(empty($this->first_rate) || $this->first_rate == 0){
+					$tax = __('No interest','woocommerce-boleto-parcelado');
+				}
+				else{
+					$rate = str_replace('%', '', $this->first_rate);
+				    $rate = intval($this->first_rate);
+				    $value = ($rate / 100) * $item_price;
+				    $item_price = $item_price + $value;
+				    $tax = $rate . '%';
+				    $tax = sprintf(__('%s interest','woocommerce-boleto-parcelado'),$tax);
+				}
 			}
 			elseif(empty($this->rate) || intval($this->rate) == 0){
 				$tax = __('No interest','woocommerce-boleto-parcelado');
@@ -870,6 +886,12 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			$item_price = intval($this->get_order_total()) / $plots;
 			if(!empty($this->rate) && $plots != 1){
 				$rate = str_replace('%', '', $this->rate);
+				$rate = intval($rate);
+				$value = ($rate / 100) * $item_price;
+				$item_price = $item_price + $value;
+			}
+			if(!empty($this->first_rate) && $plots == 1){
+				$rate = str_replace('%', '', $this->first_rate);
 				$rate = intval($rate);
 				$value = ($rate / 100) * $item_price;
 				$item_price = $item_price + $value;
