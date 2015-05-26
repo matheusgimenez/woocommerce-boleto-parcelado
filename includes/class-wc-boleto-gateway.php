@@ -100,10 +100,11 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 	 * @return array max_plots and value.
 	 */
 	private function get_max_plots($value, $return_value = false){
-		for ($i = 1; $i < $this->max_plots; $i++) {
+		$max_plots = intval($this->max_plots) + 1;
+		for ($i = 1; $i < $max_plots; $i++) {
 			$next = $i + 1;
 			$next_value = intval($value) / $next;
-			if($next == intval($this->max_plots) || $next_value < intval($this->min_value)){
+			if($next == intval($max_plots) || $next_value < intval($this->min_value)){
 				$value_return = intval($value) / $i;
 				if($return_value == true){
 					return array('plots' => $i, 'value' => $value_return);
@@ -880,7 +881,7 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 	public function generate_boleto_data( $order ) {
 		$plots = intval($_POST['woocommerce-boleto-parcelado-value']);
 		$data = array();
-		$boleto_time = $boleto_time = new DateTime();
+		$boleto_time = new DateTime();
 		for ($i=1; $i <= $plots; $i++) {
 			$data[$i] = array();
 			$item_price = intval($this->get_order_total()) / $plots;
@@ -896,7 +897,6 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 				$value = ($rate / 100) * $item_price;
 				$item_price = $item_price + $value;
 			}
-			$boleto_time->modify('+'.$this->boleto_time.' days');
 
 			$data[$i]['valor'] = $item_price;
 			$data[$i]['nosso_numero'] = apply_filters( 'wcboleto_our_number', $order->id );
@@ -907,7 +907,15 @@ class WC_Boleto_Parcelado_Gateway extends WC_Payment_Gateway {
 			elseif($i == 2){
 				$data[$i]['data_vencimento'] = date( 'd/m/Y', time() + ( absint( $this->boleto_second_time ) * 86400 ) );
 			}
+			elseif($i == 3){
+				$boleto_time->modify('+'.$this->boleto_first_time.' days');
+				$boleto_time->modify('+'.$this->boleto_second_time.' days');
+				$boleto_time->modify('+'.$this->boleto_time.' days');
+
+				$data[$i]['data_vencimento'] = $boleto_time->format('d/m/Y');
+			}
 			else{
+				$boleto_time->modify('+'.$this->boleto_time.' days');
 				$data[$i]['data_vencimento'] = $boleto_time->format('d/m/Y');
 			}
 			$data[$i]['data_documento'] = date( 'd/m/Y' );
