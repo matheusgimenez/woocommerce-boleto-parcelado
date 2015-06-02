@@ -58,6 +58,7 @@ class WC_Boleto_Parcelado {
 			add_action( 'template_include', array( $this, 'boleto_template' ) );
 			add_action( 'woocommerce_view_order', array( $this, 'pending_payment_message' ) );
 			add_action( 'woocommerce_order_details_after_order_table', array( $this, 'pending_payment_message' ) );
+			add_action( 'woocommerce_get_formatted_order_total', array( $this, 'show_price' ) );
 		} else {
 			add_action( 'admin_notices', array( $this, 'woocommerce_missing_notice' ) );
 		}
@@ -191,6 +192,26 @@ class WC_Boleto_Parcelado {
 	 *
 	 * @return string        Message HTML.
 	 */
+	public function show_price( $subtotal ) {
+		if(!$order_id = get_query_var( 'view-order'))
+			return $subtotal;
+
+		$order = new WC_Order($order_id);
+		if ( 'boleto-parcelado' == $order->payment_method ) {
+			$infos = get_post_meta( $order->id, 'wc_boleto_infos', true );
+			if(!$infos || empty($infos))
+				return $subtotal;
+
+			return $subtotal . ' [ ' . sprintf(__('%sx of %s','woocommerce-boleto-parcelado'), $infos['plots'], wc_price($infos['value'])) . ' ] ';
+
+		}
+		return $subtotal . 'ahoy';
+	}
+
+	/**
+	 * Show price with plugin
+	 *
+	 */
 	public function pending_payment_message( $order_id ) {
 		$order = new WC_Order( $order_id );
 
@@ -210,7 +231,6 @@ class WC_Boleto_Parcelado {
 			echo $html;
 		}
 	}
-
 	/**
 	 * WooCommerce fallback notice.
 	 *
