@@ -57,6 +57,7 @@ class WC_Boleto_Parcelado {
 			add_action( 'init', array( $this, 'add_boleto_endpoint' ) );
 			add_action( 'template_include', array( $this, 'boleto_template' ) );
 			add_action( 'woocommerce_view_order', array( $this, 'pending_payment_message' ) );
+			add_action( 'woocommerce_order_details_after_order_table', array( $this, 'pending_payment_message' ) );
 		} else {
 			add_action( 'admin_notices', array( $this, 'woocommerce_missing_notice' ) );
 		}
@@ -193,7 +194,7 @@ class WC_Boleto_Parcelado {
 	public function pending_payment_message( $order_id ) {
 		$order = new WC_Order( $order_id );
 
-		if ( 'on-hold' === $order->status && 'boleto' == $order->payment_method ) {
+		if ( 'on-hold' === $order->status && 'boleto-parcelado' == $order->payment_method ) {
 			$html = '<div class="woocommerce-info">';
 			$html .= sprintf( '<a class="button" href="%s" target="_blank" style="display: block !important; visibility: visible !important;">%s</a>', self::get_boleto_url( $order->order_key ), __( 'Pay the Ticket &rarr;', 'woocommerce-boleto-parcelado' ) );
 
