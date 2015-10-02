@@ -73,23 +73,23 @@ msgid "Ticket Details"
 msgstr "Detalhes do Boleto"
 
 #: ../class-wc-boleto-gateway.php:168 ../includes/class-wc-boleto-gateway.php:169
-msgid "Deadline to pay the Ticket"
-msgstr "Dias para pagar o Boleto"
+msgid "Time interval between installments"
+msgstr "Intervalo entre boletos"
 
 #: ../class-wc-boleto-gateway.php:170 ../class-wc-boleto-gateway.php:177 ../class-
 #: wc-boleto-gateway.php:184 ../includes/class-wc-boleto-gateway.php:171 ..
 #: /includes/class-wc-boleto-gateway.php:178 ../includes/class-wc-boleto-gateway.
 #: php:185
-msgid "Number of days to pay."
-msgstr "Número de dias para pagar."
+msgid "Number of days between payments"
+msgstr "Número de dias entre pagamentos."
 
 #: ../class-wc-boleto-gateway.php:175 ../includes/class-wc-boleto-gateway.php:176
 msgid "Deadline to pay the First Ticket"
-msgstr "Tempo de pagamento para o primeiro boleto"
+msgstr "Data do primeiro boleto"
 
 #: ../class-wc-boleto-gateway.php:182 ../includes/class-wc-boleto-gateway.php:183
 msgid "Deadline to pay the Second Ticket"
-msgstr "Tempo de pagamento para o segundo boleto"
+msgstr "Data do segundo boleto"
 
 #: ../class-wc-boleto-gateway.php:189 ../includes/class-wc-boleto-gateway.php:190
 msgid "Minimum value for ticket appear"
